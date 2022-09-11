@@ -26,10 +26,18 @@ module.exports = {
     // 不允许多个空格
     'no-multi-spaces': ['error'],
     // 限制只能逗号后面接空格
-    'comma-spacing':['error', { 'before': false, 'after': true }],
+    'comma-spacing': ['error', { 'before': false, 'after': true }],
     // 调用函数不允许有空格
     'func-call-spacing': ['error', 'never'],
     // 不允许尾部分号
     'semi': ['error', 'never'],
+    // 对象前后要有空格
+    'object-curly-spacing': ['error', 'always'],
+    // 箭头函数的前后要有空格
+    'arrow-spacing': ['error', { before: true, after: true }],
+    // 对象声明的冒号后面要有空格
+    'key-spacing': ['error', { beforeColon: false, afterColon: true }],
+    // 等于号前后要有空格
+    'space-infix-ops': ['error', { 'int32Hint': false }],
   },
 }

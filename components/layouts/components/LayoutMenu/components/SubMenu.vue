@@ -1,10 +1,10 @@
 <template>
   <a-sub-menu v-if="menu">
     <template
-      v-if="menu.meta && menu.meta.iconComponent"
+      v-if="menu.meta.iconComponent"
       #icon
     >
-      <component :is="menu.meta && menu.meta.iconComponent" />
+      <component :is="menu.meta.iconComponent" />
     </template>
     <template #title>
       {{ menuTitle }}

@@ -1,6 +1,6 @@
 <template>
   <a-layout-sider
-    :collapsed="collapsed"
+    :collapsed="store.collapsed"
     class="top-0 bottom-0 left-0 w-full h-screen mb-12"
     style="background-color: #374151; position: fixed;"
     collapsible
@@ -18,14 +18,9 @@
 </template>
 
 <script setup lang='ts'>
+import { useLayoutCollapsedStore } from '~~/stores/useLayoutCollapsedStore'
 import LayoutMenu from './LayoutMenu/Index.vue'
 
-
-const props = withDefaults(defineProps<{
-  collapsed?: boolean
-}>(), {
-  collapsed: false,
-})
-
+const store = useLayoutCollapsedStore()
 </script>
 

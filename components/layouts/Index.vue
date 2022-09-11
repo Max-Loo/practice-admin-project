@@ -1,7 +1,7 @@
 <template>
   <a-layout has-sider>
-    <LayoutSider v-model:collapsed="collapsed" />
-    <a-layout :style="{ marginLeft: (collapsed ? 80 : 200 ) + 'px' }">
+    <LayoutSider />
+    <a-layout :style="{ marginLeft: (store.collapsed ? 80 : 200 ) + 'px' }">
       <LayoutHeader />
       <a-layout-content class="p-6 bg-gray-100">
         <slot />
@@ -14,8 +14,8 @@
 <script setup lang='ts'>
 import LayoutSider from './components/LayoutSider.vue'
 import LayoutHeader from './components/LayoutHeader.vue'
+import { useLayoutCollapsedStore } from '~~/stores/useLayoutCollapsedStore'
 
-const collapsed = ref(false)
-
+const store = useLayoutCollapsedStore()
 </script>
 

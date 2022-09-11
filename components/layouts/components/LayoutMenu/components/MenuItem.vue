@@ -4,14 +4,14 @@
     :key="menu.name"
   >
     <template
-      v-if="menu.meta && menu.meta.iconComponent"
+      v-if="menu.meta.iconComponent"
       #icon
     >
-      <component :is="menu.meta && menu.meta.iconComponent" />
+      <component :is="menu.meta.iconComponent" />
     </template>
-    <router-link :to="menu.path">
+    <nuxt-link :to="menu.path">
       {{ menuTitle }}
-    </router-link>
+    </nuxt-link>
   </a-menu-item>
 </template>
 
