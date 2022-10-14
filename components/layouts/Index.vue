@@ -3,7 +3,7 @@
     <LayoutSider />
     <a-layout :style="{ marginLeft: (store.collapsed ? 80 : 200 ) + 'px' }">
       <LayoutHeader />
-      <a-layout-content class="p-6 bg-gray-100 min-content-height">
+      <a-layout-content class="p-4 bg-gray-100 min-content-height">
         <slot />
       </a-layout-content>
       <!-- <a-layout-footer class="text-center">
